@@ -14,11 +14,11 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 
 # bundle in g resources
 # not sure about needing .., but it works
-add_custom_command(OUTPUT resources.c
+add_custom_command(OUTPUT vdcresources.c
                   COMMAND glib-compile-resources ../vdcapp.gresource.xml
-                          --target=resources.c --sourcedir=.. --generate-source
-                  DEPENDS vdcapp.gresource.xml vdc.glade)
+                          --target=vdcresources.c --sourcedir=.. --generate-source
+                  DEPENDS vdcapp.gresource.xml vdcui.glade)
 
-add_executable(veikk_driver_config main.c vdcapp.c vdcapp.h vdcappwin.c vdcappwin.h resources.c)
+add_executable(veikk_driver_config vdcapp.c vdcresources.c)
 
 target_link_libraries(veikk_driver_config ${GTK3_LIBRARIES})

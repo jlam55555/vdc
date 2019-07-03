@@ -1,31 +1,32 @@
 #include <gtk/gtk.h>
-#include "vdcapp.h"
-#include "vdcappwin.h"
 
-struct _VDCApp {
-    GtkApplication parent;
-};
+void vdc_activate(GtkApplication *app, gpointer user_data) {
+    GtkBuilder *builder;
+    GtkWidget *window;
 
-G_DEFINE_TYPE(VDCApp, vdc_app, GTK_TYPE_APPLICATION);
+    gtk_init(NULL, NULL);
 
-static void vdc_app_init(VDCApp *app) {
-    // pass
+    builder = gtk_builder_new_from_resource(
+                  "/com/github/jlam55555/vdc/vdcui.glade");
+    window = GTK_WIDGET(gtk_builder_get_object(builder, "window_main"));
+    gtk_builder_connect_signals(builder, NULL);
+
+    g_object_unref(builder);
+
+    gtk_widget_show(window);
+    gtk_main();
 }
 
-static void vdc_app_activate(GApplication *app) {
-    VDCAppWindow *win;
+int main(int argc, char **argv) {
 
-    win = vdc_app_window_new(VDC_APP(app));
-    gtk_window_present(GTK_WINDOW(win));
-}
+    GtkApplication *app;
+    int status;
 
-static void vdc_app_class_init(VDCAppClass *class) {
-    G_APPLICATION_CLASS(class)->activate = vdc_app_activate;
-}
+    app = gtk_application_new("com.github.jlam55555.vdc",
+                              G_APPLICATION_FLAGS_NONE);
+    g_signal_connect(app, "activate", G_CALLBACK(vdc_activate), NULL);
+    status = g_application_run(G_APPLICATION(app), argc, argv);
+    g_object_unref(app);
 
-VDCApp *vdc_app_new(void) {
-    return g_object_new(VDC_APP_TYPE,
-                        "application-id", "com.github.jlam55555.vdc",
-                        "flags", G_APPLICATION_FLAGS_NONE,
-                        NULL);
+    return status;
 }
