@@ -1,3 +1,0 @@
-/home/jon/CLionProjects/veikk-driver-config/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/jon/CLionProjects/veikk-driver-config/cmake-build-debug/CMakeFiles/veikk_driver_config.dir
-/home/jon/CLionProjects/veikk-driver-config/cmake-build-debug/CMakeFiles/edit_cache.dir
