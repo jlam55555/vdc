@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
     <gresource prefix="/com/github/jlam55555/vdc">
-        <file preprocess="xml-stripblanks">window.ui</file>
+        <file preprocess="xml-stripblanks">vdc.glade</file>
     </gresource>
 </gresources>

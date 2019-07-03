@@ -17,7 +17,7 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 add_custom_command(OUTPUT resources.c
                   COMMAND glib-compile-resources ../vdcapp.gresource.xml
                           --target=resources.c --sourcedir=.. --generate-source
-                  DEPENDS vdcapp.gresource.xml window.ui)
+                  DEPENDS vdcapp.gresource.xml vdc.glade)
 
 add_executable(veikk_driver_config main.c vdcapp.c vdcapp.h vdcappwin.c vdcappwin.h resources.c)
 
