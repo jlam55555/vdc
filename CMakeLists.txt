@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 project(veikk_driver_config C)
 
 set(CMAKE_C_STANDARD 99)
+set(CMAKE_VERBOSE_MAKEFILE ON)
 
 # add gtk
 find_package(PkgConfig REQUIRED)
@@ -19,6 +20,8 @@ add_custom_command(OUTPUT vdcresources.c
                           --target=vdcresources.c --sourcedir=.. --generate-source
                   DEPENDS vdcapp.gresource.xml vdcui.glade)
 
-add_executable(veikk_driver_config vdcapp.c vdcresources.c)
-
+add_executable(veikk_driver_config vdcapp.c vdcresources.c vdchandlers.c)
 target_link_libraries(veikk_driver_config ${GTK3_LIBRARIES})
+
+# necessary for signals to work from template
+target_link_options(veikk_driver_config PUBLIC -rdynamic)

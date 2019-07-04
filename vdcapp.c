@@ -5,8 +5,6 @@ void vdc_activate(GtkApplication *app, gpointer user_data) {
     GtkBuilder *builder;
     GtkWidget *window;
 
-    gtk_init(NULL, NULL);
-
     builder = gtk_builder_new_from_resource(
                   "/com/github/jlam55555/vdc/vdcui.glade");
     window = GTK_WIDGET(gtk_builder_get_object(builder, "window_main"));
@@ -24,6 +22,7 @@ int main(int argc, char **argv) {
     GtkApplication *app;
     int status;
 
+    gtk_init(&argc, &argv);
     app = gtk_application_new("com.github.jlam55555.vdc",
                               G_APPLICATION_FLAGS_NONE);
     g_signal_connect(app, "activate", G_CALLBACK(vdc_activate), NULL);
