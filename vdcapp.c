@@ -1,5 +1,6 @@
 #include <gtk/gtk.h>
 
+// set up window using gtkbuilder
 void vdc_activate(GtkApplication *app, gpointer user_data) {
     GtkBuilder *builder;
     GtkWidget *window;
@@ -17,6 +18,7 @@ void vdc_activate(GtkApplication *app, gpointer user_data) {
     gtk_main();
 }
 
+// start gtk application
 int main(int argc, char **argv) {
 
     GtkApplication *app;
