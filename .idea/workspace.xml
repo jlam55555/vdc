@@ -12,11 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1668d261-2dd2-496f-a9fc-5f5c4e5c52e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/select_area.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vdctypes.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vdchandlers.c" beforeDir="false" afterPath="$PROJECT_DIR$/vdchandlers.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vdcapp.c" beforeDir="false" afterPath="$PROJECT_DIR$/vdcapp.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vdcapp.gresource.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vdcapp.gresource.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vdcui.glade" beforeDir="false" afterPath="$PROJECT_DIR$/vdcui.glade" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -45,7 +43,16 @@
         <entry file="file://$PROJECT_DIR$/vdcui.glade">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
-              <caret line="74" column="87" selection-start-line="74" selection-start-column="87" selection-end-line="74" selection-end-column="87" />
+              <caret line="124" column="64" selection-start-line="124" selection-start-column="64" selection-end-line="124" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vdcapp.gresource.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -53,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vdcapp.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+            <state relative-caret-position="300">
+              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -64,18 +71,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
               <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/select_area.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="57" lean-forward="true" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -118,18 +113,18 @@
         <option value="$PROJECT_DIR$/window.ui" />
         <option value="$PROJECT_DIR$/vdcappwin.c" />
         <option value="$PROJECT_DIR$/vdc.glade" />
-        <option value="$PROJECT_DIR$/vdcapp.gresource.xml" />
         <option value="$PROJECT_DIR$/vdcapp.h" />
         <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/vdchandlers.h" />
-        <option value="$PROJECT_DIR$/vdcapp.c" />
         <option value="$PROJECT_DIR$/vdapp.h" />
         <option value="$PROJECT_DIR$/vdcui.glade" />
         <option value="$PROJECT_DIR$/vdctypes.h" />
         <option value="$PROJECT_DIR$/vdchandlers.c" />
         <option value="$PROJECT_DIR$/select_area.c" />
+        <option value="$PROJECT_DIR$/vdcapp.c" />
+        <option value="$PROJECT_DIR$/vdcapp.gresource.xml" />
       </list>
     </option>
   </component>
@@ -162,7 +157,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/github/veikk-s640-driver/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
@@ -198,12 +193,13 @@
       <updated>1562162937392</updated>
       <workItem from="1562162940123" duration="13988000" />
       <workItem from="1562184817701" duration="9309000" />
-      <workItem from="1562245581809" duration="1087000" />
+      <workItem from="1562245581809" duration="1172000" />
+      <workItem from="1562339332720" duration="7149000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24384000" />
+    <option name="totallyTimeSpent" value="31618000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -219,10 +215,10 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25528455" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2579946" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.499729" weight="0.3294979" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.499729" weight="0.32914045" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.500271" side_tool="true" weight="0.3301887" />
       <window_info anchor="bottom" id="Database Changes" order="3" />
       <window_info active="true" anchor="bottom" id="Messages" order="4" sideWeight="0.499729" visible="true" weight="0.32914045" />
@@ -284,14 +280,22 @@
     <entry file="file://$PROJECT_DIR$/main.c" />
     <entry file="file://$PROJECT_DIR$/vdcappwin.c" />
     <entry file="file://$PROJECT_DIR$/window.ui" />
-    <entry file="file://$PROJECT_DIR$/vdcapp.gresource.xml">
+    <entry file="file://$PROJECT_DIR$/vdchandlers.h" />
+    <entry file="file://$PROJECT_DIR$/vdapp.h" />
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        <state relative-caret-position="330">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vdchandlers.h" />
+    <entry file="file://$PROJECT_DIR$/vdctypes.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -302,31 +306,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vdcui.glade">
+    <entry file="file://$PROJECT_DIR$/select_area.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="74" column="87" selection-start-line="74" selection-start-column="87" selection-end-line="74" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vdapp.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vdcapp.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+        <state relative-caret-position="-255">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -340,20 +323,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vdctypes.h">
+    <entry file="file://$PROJECT_DIR$/vdcapp.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="300">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/select_area.c">
+    <entry file="file://$PROJECT_DIR$/vdcui.glade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="57" lean-forward="true" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="312">
+          <caret line="124" column="64" selection-start-line="124" selection-start-column="64" selection-end-line="124" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vdcapp.gresource.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
         </state>
       </provider>
     </entry>

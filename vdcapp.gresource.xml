@@ -3,4 +3,7 @@
     <gresource prefix="/com/github/jlam55555/vdc">
         <file preprocess="xml-stripblanks">vdcui.glade</file>
     </gresource>
+    <gresource prefix="/com/github/jlam55555/vdc">
+        <file>image.jpeg</file>
+    </gresource>
 </gresources>
