@@ -15,22 +15,22 @@
       <row>
         <col id="0">0</col>
         <col id="1" translatable="yes">Default</col>
-        <col id="2">image.jpeg</col>
+        <col id="2">ori_default.png</col>
       </row>
       <row>
         <col id="0">1</col>
         <col id="1" translatable="yes">Rotated right</col>
-        <col id="2">image.jpeg</col>
+        <col id="2">ori_rot_right.png</col>
       </row>
       <row>
         <col id="0">2</col>
         <col id="1" translatable="yes">Left handed (reversed)</col>
-        <col id="2">image.jpeg</col>
+        <col id="2">ori_reversed.png</col>
       </row>
       <row>
         <col id="0">3</col>
         <col id="1" translatable="yes">Rotated left</col>
-        <col id="2">image.jpeg</col>
+        <col id="2">ori_rot_left.png</col>
       </row>
     </data>
   </object>

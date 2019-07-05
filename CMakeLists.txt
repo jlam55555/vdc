@@ -17,10 +17,12 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 # not sure about needing .., but it works
 add_custom_command(OUTPUT vdcresources.c
                   COMMAND glib-compile-resources ../vdcapp.gresource.xml
-                          --target=vdcresources.c --sourcedir=.. --generate-source
-                  DEPENDS vdcapp.gresource.xml vdcui.glade)
+                          --target=vdcresources.c --sourcedir=../assets
+                          --generate-source
+                  DEPENDS vdcapp.gresource.xml assets/vdcui.glade)
 
-add_executable(veikk_driver_config vdcapp.c vdcresources.c vdchandlers.c vdctypes.h select_area.c)
+add_executable(veikk_driver_config vdcapp.c vdcresources.c vdchandlers.c
+               vdctypes.h select_area.c)
 target_link_libraries(veikk_driver_config ${GTK3_LIBRARIES})
 
 # necessary for signals to work from template
