@@ -22,7 +22,7 @@ add_custom_command(OUTPUT vdcresources.c
                   DEPENDS vdcapp.gresource.xml assets/vdcui.glade)
 
 add_executable(veikk_driver_config vdcapp.c vdcresources.c vdchandlers.c
-               vdctypes.h select_area.c)
+        vdcapp.h select_area.c)
 target_link_libraries(veikk_driver_config ${GTK3_LIBRARIES})
 
 # necessary for signals to work from template
