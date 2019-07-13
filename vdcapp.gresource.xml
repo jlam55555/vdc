@@ -2,8 +2,9 @@
 <gresources>
     <gresource prefix="/com/github/jlam55555/vdc">
         <file preprocess="xml-stripblanks">vdcui.glade</file>
-    </gresource>
-    <gresource prefix="/com/github/jlam55555/vdc">
-        <file>image.jpeg</file>
+        <file>ori_default.png</file>
+        <file>ori_rot_right.png</file>
+        <file>ori_reversed.png</file>
+        <file>ori_rot_left.png</file>
     </gresource>
 </gresources>

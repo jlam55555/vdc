@@ -1,5 +1,5 @@
 #include <gtk/gtk.h>
-#include "vdctypes.h"
+#include "vdcapp.h"
 
 static gboolean select_window_button_press(GtkWidget *window,
                                            GdkEventButton *event,
@@ -99,15 +99,21 @@ void select_area(struct select_data *select_data) {
 
     // now for testing TODO: later change to other, non-arbitrary values
     select_data->rect = (GdkRectangle) {
-            .x = 100,
-            .y = 100,
-            .width = 100,
-            .height = 100
+        .x = 100,
+        .y = 100,
+        .width = 100,
+        .height = 100
     };
     select_data->started = FALSE;
 
     screen = gdk_screen_get_default();
     visual = gdk_screen_get_rgba_visual(screen);
+    select_data->screen = (GdkRectangle) {
+        .x = 0,
+        .y = 0,
+        .width = gdk_screen_get_width(screen),
+        .height = gdk_screen_get_height(screen),
+    };
 
     window = gtk_window_new(GTK_WINDOW_POPUP);
     select_data->window = window;
