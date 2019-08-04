@@ -13,7 +13,25 @@
             g_free(text_##label_id)
 
 void vdc_handler_save(GtkWidget *widget, gpointer data) {
-    // TODO: save handler
+    gchararray orientation_text,
+               screen_map_text;
+
+    // orientation
+    orientation_text = (gchararray) malloc(2 * sizeof(gchar));
+    sprintf(orientation_text, "%i", vdc_settings.orientation);
+    vdc_write_setting(SET_ORIENTATION, orientation_text);
+
+    // save settings to vdc_settings
+    // arbitrary text length right now
+    screen_map_text = (gchararray) malloc(30 * sizeof(gchar));
+    sprintf(screen_map_text, "%i,%i,%i,%i,%i,%i",
+            vdc_settings.rect.x,
+            vdc_settings.rect.y,
+            vdc_settings.rect.width,
+            vdc_settings.rect.height,
+            vdc_settings.screen.width,
+            vdc_settings.screen.height);
+    vdc_write_setting(SET_MAP_SCREEN, screen_map_text);
 }
 void vdc_handler_restore(GtkWidget *widget, gpointer data) {
     vdc_settings_set_default();
@@ -32,17 +50,20 @@ void vdc_handler_cancel(GtkWidget *widget, gpointer data) {
 void vdc_handler_orientation(GtkWidget *widget, gpointer data) {
     enum orientation orientation;
 
-    // only handle newly-selected orientation
-    if(!gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget))) {
-        return;
-    }
-
-    // names are like "orientation_1", so choose 12th character to switch by
-    orientation = (enum orientation) (gtk_widget_get_name(widget)[12] - '0');
+    orientation = (enum orientation)
+                  gtk_combo_box_get_active(GTK_COMBO_BOX(widget));
     vdc_settings.orientation = orientation;
 }
-
-void vdc_handler_scda(GtkWidget *widget, gpointer data) {
+void vdc_handler_map_mode(GtkWidget *widget,
+                          gpointer data) {
+// redo this logic later
+//    g_print(gtk_widget_get_name(widget));
+//    // only get if active
+//    if(!gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget)))
+//        return;
+}
+void vdc_handler_scda(GtkWidget *widget,
+                      gpointer data) {
     struct select_data select_data;
 
     select_area(&select_data);

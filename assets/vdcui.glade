@@ -126,6 +126,7 @@
                         <property name="can_focus">False</property>
                         <property name="model">orientation_list_store</property>
                         <property name="active">0</property>
+                        <signal name="changed" handler="vdc_handler_orientation" swapped="no"/>
                         <child>
                           <object class="GtkCellRendererText"/>
                           <attributes>
@@ -186,12 +187,14 @@
                     <child>
                       <object class="GtkRadioButton" id="screen_map_type">
                         <property name="label" translatable="yes">Map to full screen (default)</property>
+                        <property name="name">da_default</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">False</property>
                         <property name="xalign">0</property>
                         <property name="active">True</property>
                         <property name="draw_indicator">True</property>
+                        <signal name="toggled" handler="vdc_handler_map_mode" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -205,8 +208,9 @@
                         <property name="can_focus">False</property>
                         <property name="orientation">vertical</property>
                         <child>
-                          <object class="GtkRadioButton">
-                            <property name="label" translatable="yes">Custon drawing area</property>
+                          <object class="GtkRadioButton" id="screen_map_custom">
+                            <property name="label" translatable="yes">Custom drawing area</property>
+                            <property name="name">da_custom</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
@@ -214,6 +218,7 @@
                             <property name="active">True</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">screen_map_type</property>
+                            <signal name="toggled" handler="vdc_handler_map_mode" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -310,7 +315,7 @@
                                 <property name="name">screen_width</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">0</property>
+                                <property name="label" translatable="yes">-</property>
                               </object>
                               <packing>
                                 <property name="left_attach">2</property>
@@ -321,7 +326,7 @@
                               <object class="GtkLabel" id="screen_height">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">0</property>
+                                <property name="label" translatable="yes">-</property>
                               </object>
                               <packing>
                                 <property name="left_attach">2</property>
@@ -332,7 +337,7 @@
                               <object class="GtkLabel" id="da_y">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">0</property>
+                                <property name="label" translatable="yes">-</property>
                               </object>
                               <packing>
                                 <property name="left_attach">2</property>
@@ -343,7 +348,7 @@
                               <object class="GtkLabel" id="da_x">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">0</property>
+                                <property name="label" translatable="yes">-</property>
                               </object>
                               <packing>
                                 <property name="left_attach">2</property>
@@ -354,7 +359,7 @@
                               <object class="GtkLabel" id="da_width">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">0</property>
+                                <property name="label" translatable="yes">-</property>
                               </object>
                               <packing>
                                 <property name="left_attach">2</property>
@@ -365,7 +370,7 @@
                               <object class="GtkLabel" id="da_height">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">0</property>
+                                <property name="label" translatable="yes">-</property>
                               </object>
                               <packing>
                                 <property name="left_attach">2</property>

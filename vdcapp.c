@@ -36,7 +36,7 @@ void vdc_write_setting(enum setting setting, const gchararray setting_text) {
                                        "w");
             break;
         case SET_MAP_SCREEN:
-            sysfs_param_handle = fopen("/sys/module/veikk/parameters/map_screen",
+            sysfs_param_handle = fopen("/sys/module/veikk/parameters/screen_map",
                                        "w");
             break;
         default:
